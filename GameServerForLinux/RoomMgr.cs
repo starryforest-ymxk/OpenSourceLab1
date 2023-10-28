@@ -1,4 +1,4 @@
-﻿//WanChen
+﻿//by WanChen
 using GameServerForLinux;
 using System;
 using System.Collections.Generic;
