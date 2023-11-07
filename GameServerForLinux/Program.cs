@@ -11,7 +11,7 @@ using GameServerForLinux;
 using System.Timers;
 
 
-//good
+//good    添加注释
 namespace GameServerForLinux
 {
     internal class Program
