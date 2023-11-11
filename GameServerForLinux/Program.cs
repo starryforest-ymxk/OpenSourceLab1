@@ -11,7 +11,7 @@ using GameServerForLinux;
 using System.Timers;
 
 
-//good    添加注释
+
 namespace GameServerForLinux
 {
     internal class Program
@@ -66,13 +66,13 @@ namespace GameServerForLinux
 
                     case "/Quit":
                     case "/quit":
-
+                        //关闭服务器
                         server.BeforeExit();
                         break;
 
                     case "/Send":
                     case "/send":
-
+                        // 向客户端发送消息
                         string info = commandLine.Substring(5).Trim();
                         server.SendMsgFromServer(info);
                         break;
@@ -125,7 +125,7 @@ namespace GameServerForLinux
 
                         server.GetRoomNum();
                         break;
-                    
+
                     case "/Record":
                     case "/record":
 
@@ -137,7 +137,7 @@ namespace GameServerForLinux
 
                         server.GetRoomInfo();
                         break;
-                    
+
                     case "/RoomsClear":
                     case "/roomsClear":
 
@@ -461,7 +461,7 @@ namespace GameServerForLinux
             try
             {
                 client.socket.Send(Encoding.UTF8.GetBytes("Server disconnected"));
-            }catch 
+            }catch
             {
                 ClientDisconnect(client);
             }
@@ -700,7 +700,7 @@ namespace GameServerForLinux
                 Console.WriteLine($"Successfully Sent{{{command}}}");
                 Console.ForegroundColor = ConsoleColor.White;
             }
-            
+
         }
 
         public void Debug(bool mode)
